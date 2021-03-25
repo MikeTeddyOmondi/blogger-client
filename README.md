@@ -1,5 +1,4 @@
 # Blogger Website | Client
-___
 
 ### Version:
 - 1.0.0
