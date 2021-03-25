@@ -15,7 +15,7 @@ ___
 ___
 
 #### Developed by:
-- MikeTeddyOmondi - Rancko Solutions LLC.
+- MikeTeddyOmondi | **Rancko Solutions LLC**
 ___
 
 ##### License: 
