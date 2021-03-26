@@ -1,0 +1,27 @@
+{
+  "name": "dynasty-client",
+  "version": "1.0.0",
+  "description": "A website for a blogger. Fetches all or a single blog and perform other CRUD operations from a RESTful API endpoints.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeTeddyOmondi/blogger-client.git"
+  },
+  "author": "MikeTeddyOmondi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeTeddyOmondi/blogger-client/issues"
+  },
+  "homepage": "https://github.com/MikeTeddyOmondi/blogger-client#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

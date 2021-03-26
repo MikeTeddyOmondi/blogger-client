@@ -1,1 +1,1 @@
-web: heroku-php-nginx public/
+web: node server.js
