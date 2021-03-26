@@ -2,7 +2,7 @@
 console.log('Client-Side | JavaScript running!...');
 
 const form = document.getElementById('contactForm'); 
-const API_URL = (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') ? 'http://localhost:5000' : 'https://dynsty-api.herokuapp.com';
+const API_URL = (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') ? 'http://localhost:5000' : 'https://dynasty-api.herokuapp.com';
 
 // BrowserFs Module - For accessing LocalStorage file system
 BrowserFS.install(window);
