@@ -100,8 +100,8 @@ const app =
         if (err) {
           console.log(err);
         }
-        console.log("Blogs retrieved ...")
         articles = JSON.parse(data)
+        console.log("Blogs retrieved ...")
         return articles
       })
     }
