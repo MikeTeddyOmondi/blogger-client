@@ -10,6 +10,22 @@
 
     <title>Dynasty | Bloggers Org.</title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9X7NKJFEZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P9X7NKJFEZ');
+    </script>
+
+    <!-- Google AdSense-->
+    <script data-ad-client="ca-pub-3101499917033212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,6 +36,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
 
 </head>
 
@@ -103,33 +123,77 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="mb-5">
+                        <h3 class="footer-heading mb-2">Subscribe to my newsletters!!!</h3>
+                        <p>If you find the blogs engaging you can subscribe to our newsletter for updates on new scheduled ones and you'll be the first to get notifications when they are published.</p>
+
+                        <form name="subscribeForm" id="subscribeForm" novalidate>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls">
+                                    <label>Email Address</label>
+                                    <input type="email" class="form-control" name="subscriberEmail" placeholder="Email address" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" class="btn btn-primary" id="subscribeButton">Subscribe!</button>
+                            </div>
+                        </form>
+                    </div>
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
                             <a href="#">
                                 <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">
                                 <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">
                                 <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Dynasty | Bloggers Org. 2021</p>
+                    <p class="copyright text-muted">Copyright &copy; Dynasty | Bloggers Org.
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>. This website is maintained by <a href="https://ranckosolutions.com" target="_blank">Rancko Solutions LLC.</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -143,8 +207,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
     <script src="js/browserfs.min.js"></script>
     <script src="js/browserfs.js"></script>
     <script src="js/clean-blog.min.js"></script>
