@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Anchor Dynasty Records">
     <meta name="author" content="MikeTeddyOmondi | Rancko Solutions LLC">
 
     <title>Dynasty | Bloggers Org.</title>
@@ -37,10 +37,6 @@
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
 
-    <!-- Vue.js CDN -->
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
-
 </head>
 
 <body>
@@ -48,7 +44,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Dynasty | Bloggers Org.</a>
+            <a class="navbar-brand" href="/">Dynasty | Bloggers Org.</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -56,16 +52,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="post.html">Posts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -73,14 +66,14 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/about-bg.jpg')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>Blogs</h1>
-                        <span class="subheading">Dynasty | Bloggers Org.</span>
+                    <div class="page-heading">
+                        <h1>About Us</h1>
+                        <span class="subheading">This is what we do.</span>
                     </div>
                 </div>
             </div>
@@ -88,29 +81,33 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container" id="app">
+    <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <div v-for="(blog, index) in blogs" :key="blog._id">
-                    <hr>
-                    <div class="post-preview">
-                        <a href="#">
-                            <h2 class="post-title">
-                                {{ blog.title }}
-                            </h2>
-                            <h3 class="post-subtitle">
-                                {{ blog.description }}
-                            </h3>
-                        </a>
-                        <p class="post-meta"> Posted by
-                            <a href="#">Bloggers Org.</a> {{ blog.createdAt }}
-                        </p>
-                    </div>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <div class="clearfix">
-                    <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                <p>
+                    At Anchor Dynasty Records we create content that helps to promote brands of aspiring entrepreneurs. Our content motivates and inspires Millennial(s) to explore their potentials and get most out of their ideas. We are Based in Kenya, and we desire to improve
+                    and ease brands efforts towards positioning their products, linking them with potential customers and most importantly ensure they gain traffic in their businesses through the use of social media. We desire to help small and established
+                    businesses reach their potential in the following fields
+                </p>
+                <ol>
+                    <li>Social Media Management</li>
+                    <li>Brand Positioning and Promotions</li>
+                    <li>Digital Advertising and Marketing</li>
+                    <li>Business Launch Campaigns</li>
+                    <li>Digital Public Relations and Strategy</li>
+                    <li>Cooperate Photography</li>
+                </ol>
+                <p>
+                    By working with us, you get an additional 2 weeks additional services to enjoy our expertise and benefit from working closely with our team.
+                </p>
+                <p>
+                    Anchor Dynasty Records is the place to be because you belong!! Hope in and let’s sail along. much love and appreciation.
+                </p>
+                <div class="m-0 p-0">
+                    <b>
+                        <p>C.E.O and Founder</p>
+                        <p>Brandon Lio Orinn</p>
+                    </b>
                 </div>
             </div>
         </div>
@@ -123,41 +120,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="mb-5">
-                        <h3 class="footer-heading mb-2">Subscribe to my newsletters!!!</h3>
-                        <p>If you find the blogs engaging you can subscribe to our newsletter for updates on new scheduled ones and you'll be the first to get notifications when they are published.</p>
-
-                        <form name="subscribeForm" id="subscribeForm" novalidate>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" name="name" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls">
-                                    <label>Email Address</label>
-                                    <input type="email" class="form-control" name="subscriberEmail" placeholder="Email address" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="btn btn-primary" id="subscribeButton">Subscribe!</button>
-                            </div>
-                        </form>
-                    </div>
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
-                            <a href="#">
+                            <a href="https://www.twitter.com/anchordynastyrecords/">
                                 <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
+                              <i class="fas fa-circle fa-stack-2x"></i>
+                              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                              </span>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">
+                            <a href="https://www.facebook.com/anchordynastyrecords/">
                                 <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -165,7 +138,7 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">
+                            <a href="instagram.com/liobrandon254">
                                 <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
@@ -192,7 +165,7 @@
                     <p class="copyright text-muted">Copyright &copy; Dynasty | Bloggers Org.
                         <script>
                             document.write(new Date().getFullYear());
-                        </script>. This website is maintained by <a href="https://ranckosolutions.com" target="_blank">Rancko Solutions LLC.</a>
+                        </script>. This website is maintained by <a href="http://www.ranckosolutions.com" target="_blank">Rancko Solutions LLC.</a>
                     </p>
                 </div>
             </div>
@@ -202,9 +175,6 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- MomentJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/browserfs.min.js"></script>

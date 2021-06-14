@@ -60,7 +60,7 @@ if (contactform) {
                 console.log(error.message)
             });
             contactform.reset();
-            alert(`Thanks ${name} for your message. You'll be contacted within 24 hours!...`)
+            alert(`Thanks ${name} for your message. You'll be contacted through your email!...`)
         }
     });
 }
@@ -106,55 +106,73 @@ if (subscribeform) {
     });
 }
 
-const saveBlogs = async() => {
-    await fetch(`${API_URL}/api/blogs`, {
-            method: "GET",
-            headers: { "Content-type": "application/json" }
-        })
-        .then((response) => {
-            response.json()
-                .then((blogs) => {
-                    console.log(blogs)
-                    let data = JSON.stringify(blogs)
+// const saveBlogs = async() => {
+//     await fetch(`${API_URL}/api/blogs`, {
+//             method: "GET",
+//             headers: { "Content-type": "application/json" }
+//         })
+//         .then((response) => {
+//             response.json()
+//                 .then((blogs) => {
+//                     //console.log(blogs)
+//                     let data = JSON.stringify(blogs)
 
-                    function saveBlogsOffline(content, filename) {
-                        fs.writeFile(`/${filename}`, content, (err) => {
-                            if (err) {
-                                console.log(err);
-                            }
-                            console.log("Blogs have been saved for offline ...")
-                        });
-                    }
+//                     function saveBlogsOffline(content, filename) {
+//                         fs.writeFile(`/${filename}`, content, (err) => {
+//                             if (err) {
+//                                 console.log(err);
+//                             }
+//                             console.log("Blogs have been saved for offline ...")
+//                         });
+//                     }
 
-                    saveBlogsOffline(data, 'blogs.json')
-                })
-        })
-};
+//                     saveBlogsOffline(data, 'blogs.json')
+//                 })
+//         })
+// };
 
-saveBlogs()
+// saveBlogs()
 
-const { createApp } = Vue;
+// // Route Components.
+// const blog = {
+//     template: `
+//     <div></div>
+//     `
+// }
 
-const app = {
-    setup() {
-        let articles = {}
-        const getBlogs = function() {
-            fs.readFile(`blogs.json`, (err, data) => {
-                if (err) {
-                    console.log(err);
-                }
-                articles = JSON.parse(data)
-                console.log("Blogs retrieved ...")
-                return articles
-            })
-        }
+// // Routes
+// const routes = [
+//     { path: '/post/:id', component: blog }
+// ]
 
-        getBlogs()
+// // VueRouter instance 
+// const router = new VueRouter({
+//     routes
+// })
 
-        return {
-            blogs: articles
-        }
-    }
-}
+// const { createApp } = Vue;
 
-createApp(app).mount('#app')
+// const app = {
+//     setup() {
+//         router
+//         let articles = {}
+//         const getBlogs = function() {
+//             fs.readFile(`blogs.json`, (err, data) => {
+//                 if (err) {
+//                     console.log(err);
+//                 }
+//                 articles = JSON.parse(data)
+//                 console.log("Blogs retrieved ...")
+//                 return articles
+//             })
+//         }
+
+//         getBlogs()
+
+//         return {
+//             blogs: articles
+//         }
+//     }
+// }
+
+// createApp(app).mount('#app')
