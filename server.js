@@ -3,7 +3,7 @@ const path = require('path')
 const cors = require('cors')
 const axios = require('axios')
 const PORT = process.env.PORT || 8000
-const API_URL = 'http://localhost:5000' || 'https://dynasty-api.herokuapp.com'
+const API_URL = 'https://dynasty-api.herokuapp.com' || 'http://localhost:5000'
 
 const app = express()
 
