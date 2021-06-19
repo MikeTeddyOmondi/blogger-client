@@ -3,7 +3,7 @@ const path = require('path')
 const cors = require('cors')
 const axios = require('axios')
 const PORT = process.env.PORT || 8000
-const API_URL = 'https://dynasty-api.herokuapp.com' || 'http://localhost:5000'
+const API_URL = 'https://dynasty-api.herokuapp.com/api/v1' || 'http://localhost:5000/api/v1';
 
 const app = express()
 
@@ -26,7 +26,7 @@ const config = {
 // Routes
 app.get("/", async(req, res) => {
     try {
-        let blogsFetched = await axios(`${API_URL}/api/blogs`, config)
+        let blogsFetched = await axios(`${API_URL}/blogs`, config)
         const blogs = blogsFetched.data
         res.render('index', {
             blogs: blogs
@@ -57,7 +57,7 @@ app.get("/:id", async(req, res) => {
         let {
             id
         } = req.params
-        let blog_Fetched = await axios(`${API_URL}/api/blogs/${id}`, config)
+        let blog_Fetched = await axios(`${API_URL}/blogs/${id}`, config)
         const blog = blog_Fetched.data
         console.log(blog.title)
         res.render('post', {
